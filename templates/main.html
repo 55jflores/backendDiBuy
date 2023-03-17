@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Drag and Drop File Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+
+    <div style='text-align:center;'>
+        <h1>Jesus's Website</h1>
+        <form method=post enctype=multipart/form-data>
+
+            <div class="drop-zone">
+                <span class="drop-zone__prompt">Drop file here or click to upload</span>
+                <input type="file" name="file" class="drop-zone__input" multiple>
+								
+            </div>
+            <br><br>
+								<p>Enter Make</p>
+						    <input type="text" id="make" name="umake"><br><br>
+								
+								<p>Enter Model</p>
+						    <input type="text" id="model" name="umodel"><br><br>
+                <input type=submit value=Upload>
+
+        </form>
+    </div>
+    
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
